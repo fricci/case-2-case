@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import CamelCaseInput from './components/camel-case-input';
+import PascalCaseInput from './components/pascal-case-input';
+import KebabCaseInput from './components/kebab-case-input';
+import SnakeCaseInput from './components/snake-case-input';
+import { useState } from 'react';
 
 function App() {
+
+  const [stringElements, setStringElements] = useState([]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <CamelCaseInput value={stringElements} onChange={(newValue) => { setStringElements(newValue) }}></CamelCaseInput>
+      <PascalCaseInput value={stringElements} onChange={(newValue) => { setStringElements(newValue) }}></PascalCaseInput>
+      <SnakeCaseInput value={stringElements} onChange={(newValue) => { setStringElements(newValue) }}></SnakeCaseInput>
+      <KebabCaseInput value={stringElements} onChange={(newValue) => { setStringElements(newValue) }}></KebabCaseInput>
     </div>
   );
 }
