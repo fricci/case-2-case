@@ -1,3 +1,4 @@
+import styles from './case-input.module.css';
 import StringInput from './string-input';
 
 function PascalCaseInput(props) {
@@ -35,8 +36,11 @@ function PascalCaseInput(props) {
         props.onChange(result);
     }
 
-    return <div>
-        <div>Pascal case: </div><StringInput value={convertToPascalCase(props.value)} onChange={(value) => convertToArray(value)}></StringInput>
+    return <div className={styles.inputContainer}>
+        <div className={styles.inputLabel}>Pascal case: </div>
+        <div className={styles.valueInput} >
+            <StringInput className={styles.valueInput} value={convertToPascalCase(props.value)} onChange={(value) => convertToArray(value)}></StringInput>
+        </div>
     </div>;
 }
 

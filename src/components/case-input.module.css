@@ -1,0 +1,10 @@
+.inputContainer {
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputLabel {
+    display: inline-block;
+    font-size: 2em;
+}

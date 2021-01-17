@@ -1,3 +1,4 @@
+import styles from './case-input.module.css';
 import StringInput from './string-input';
 
 function CamelCaseInput(props) {
@@ -34,8 +35,11 @@ function CamelCaseInput(props) {
         props.onChange(result);
     }
 
-    return <div>
-        <div>Camel case: </div><StringInput value={convertToCamelCase(props.value)} onChange={(value) => convertToArray(value)}></StringInput>
+    return <div className={styles.inputContainer}>
+        <div className={styles.inputLabel}>Camel case: </div>
+        <div className={styles.valueInput} >
+            <StringInput value={convertToCamelCase(props.value)} onChange={(value) => convertToArray(value)}></StringInput>
+        </div>
     </div>;
 }
 

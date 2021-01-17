@@ -1,6 +1,10 @@
+const style = {
+    width: '100%'
+}
+
 function StringInput(props) {
     return <>
-        <input value={props.value} onChange={(event) => props.onChange(event.target.value)}></input>
+        <input style={{ width: style.width }} value={props.value} onChange={(event) => props.onChange(event.target.value)}></input>
     </>;
 }
 

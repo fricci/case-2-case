@@ -1,4 +1,4 @@
-import './App.css';
+import styles from './App.module.css';
 import CamelCaseInput from './components/camel-case-input';
 import PascalCaseInput from './components/pascal-case-input';
 import KebabCaseInput from './components/kebab-case-input';
@@ -10,7 +10,7 @@ function App() {
   const [stringElements, setStringElements] = useState([]);
 
   return (
-    <div>
+    <div className={styles.container}>
       <CamelCaseInput value={stringElements} onChange={(newValue) => { setStringElements(newValue) }}></CamelCaseInput>
       <PascalCaseInput value={stringElements} onChange={(newValue) => { setStringElements(newValue) }}></PascalCaseInput>
       <SnakeCaseInput value={stringElements} onChange={(newValue) => { setStringElements(newValue) }}></SnakeCaseInput>
