@@ -2,9 +2,10 @@
     display: inline-block;
     display: flex;
     flex-direction: column;
+    margin-bottom: 0.5em;
 }
 
 .inputLabel {
     display: inline-block;
-    font-size: 2em;
+    font-size: 1.5em;
 }

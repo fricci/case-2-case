@@ -1,10 +1,8 @@
-const style = {
-    width: '100%'
-}
+import styles from './string-input.module.css';
 
 function StringInput(props) {
     return <>
-        <input style={{ width: style.width }} value={props.value} onChange={(event) => props.onChange(event.target.value)}></input>
+        <input className={styles.input} value={props.value} onChange={(event) => props.onChange(event.target.value)}></input>
     </>;
 }
 
